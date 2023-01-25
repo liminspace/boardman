@@ -38,7 +38,7 @@ def device_details_to_print(known_name: str, device: ListPortInfo) -> str:
 
 
 def match_device(device: ListPortInfo, data: Dict[str, Any]) -> bool:
-    if "hwid" in data and data["hwid"] not in device.whid:
+    if "hwid" in data and data["hwid"] not in device.hwid:
         return False
     elif "manufacturer" in data and data["manufacturer"] != device.manufacturer:
         return False
